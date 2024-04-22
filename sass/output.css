@@ -1,10 +1,228 @@
-* {
+/* Font Titre */
+/* font-family: 'Shrikhand', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Font Texte */
+/* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: initial;
 }
 
-h1 {
-  font-size: 100px;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Colors */
+/* Fonts */
+.header {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  display: block;
+  margin: auto;
+  padding: 10px 0;
+  border: 10px black;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Colors */
+/* Fonts */
+/* Main */
+main {
+  background-color: #F7F7F7;
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.local {
+  background-color: #EAEAEA;
+  text-align: center;
+  height: 50px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 3px 9px 0px rgba(0, 0, 0, 0.15);
+}
+.local__text, .local__icon {
+  color: #353535;
+}
+.local__text {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.hero {
+  padding: 35px 0 55px;
+  text-align: center;
+  gap: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__title {
+  padding: 0px 48px;
+}
+.hero__subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
+}
+.hero__btn {
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  border: none;
+  width: 60%;
+  height: 50px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+.hero__btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+.functioning {
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=output.css.map */

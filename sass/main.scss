@@ -1,6 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "base/_reset";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/homepage";
+@import "pages/menu";
+@import "components/btn";
 
-h1 { font-size: 100px; }
+
