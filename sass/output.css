@@ -171,6 +171,7 @@ h1, h2 {
   margin: 14px 0px;
 }
 
+/* Components */
 .local {
   background-color: #EAEAEA;
   text-align: center;
@@ -183,10 +184,10 @@ h1, h2 {
 }
 .local__text, .local__icon {
   color: #353535;
+  text-align: center;
 }
 .local__text {
   margin-left: 10px;
-  text-align: center;
 }
 
 .hero {
@@ -223,6 +224,7 @@ h1, h2 {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
+/* Middle Section */
 .functioning {
   background-color: #FFFFFF;
   padding: 45px 15px;
@@ -242,17 +244,17 @@ h1, h2 {
   position: relative;
   padding-left: 35px;
 }
-.functioning__steps {
-  text-align: center;
-}
 .functioning__step:hover {
   background: #F6F6F6;
 }
-.functioning__step:hover i.functioning__icon {
+.functioning__step:hover .functioning__icon {
   color: #9356DC;
 }
+.functioning__steps {
+  text-align: center;
+}
 
-i.functioning__icon {
+.functioning__icon {
   color: rgb(144, 142, 142);
   width: 20px;
 }
@@ -272,6 +274,80 @@ p.text {
   font-size: 16px;
   font-weight: 500;
   margin-left: 10px;
+}
+
+/* Bottom Section */
+section.restaurants {
+  padding: 45px 15px;
+}
+
+.restaurant__card {
+  position: relative;
+  background: #FFFFFF;
+  width: 85vw;
+  height: 225px;
+  margin: 10px 0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+article.restaurants_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+span.card__badge {
+  position: absolute;
+  background: #99E2D0;
+  color: #008766;
+  padding: 5px 10px;
+  border-radius: 2px;
+  top: 20px;
+  right: 15px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+h3.card__title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p.card__subtitle {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+i.card__like.menu__like.menu__like--noBg.far.fa-heart.fa-2x {
+  color: black;
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  font-size: 24px;
+  transition: color 1s ease-out;
+}
+
+i.card__like.menu__like.menu__like--bg.fas.fa-heart.fa-2x {
+  color: transparent;
+}
+
+.card__txt {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=output.css.map */
