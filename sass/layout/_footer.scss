@@ -1,0 +1,27 @@
+footer {
+  background: $very-dark-gray;
+  padding: 18px 0;
+}
+
+a.footer__logo {
+  font-family: $font-title;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  color: $color-white;
+  padding: 15px 25px;
+}
+
+a.footer__link {
+  padding: 15px 25px;
+  line-height: 24px;
+  color: $color-white;
+  cursor: pointer;
+}
+
+i.footer__icon {
+  color: $color-white;
+  margin-right: 15px;
+}
+
