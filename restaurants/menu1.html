@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/sass/output.css" />
+
+    <link rel="icon" href="./img/favicon.ico" />
+    <title>ohmyfood!</title>
+    <meta name="title" content="Menu - ohmyfood!" />
+    <meta
+      name="description"
+      content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants."
+    />
+  </head>
+</html>
+
+<body>
+  <header class="header">
+    <a href="/index.html">
+      <i class="header__back-icon fa-solid fa-arrow-left"></i>
+    </a>
+    <a class="logo" href="#"> ohmyfood </a>
+  </header>
+
+  <main>
+    <div class="hero-section">
+      <!-- <img
+        src="/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="photo La palette du goût"
+        class="hero__img"
+      /> -->
+    </div>
+
+    <div class="background__menu">
+      <div class="title__restaurante">
+        <h2 class="title">La palette du goût</h2>
+        <span>
+          <i class="menu__like menu__like--noBg far fa-heart fa-2x"></i>
+          <i class="menu__like menu__like--bg fas fa-heart fa-2x"></i>
+        </span>
+      </div>
+
+      <!----------------------- menu entrées -->
+      <div class="menu">
+        <section class="menu__category">
+          <h3 class="menu__category-title">ENTRÉES</h3>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">Fricassée d'escargots</p>
+              <p class="menu__item-content">Au piment d'Espelette</p>
+            </div>
+            <p class="menu__item-price">25€</p>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">
+                Foie gras de canard mi-cuit
+              </p>
+              <p class="menu__item-content">Et ses copeaux de truffe noire</p>
+            </div>
+            <p class="menu__item-price">35€</p>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">Œuf au plat</p>
+              <p class="menu__item-content">
+                Assaisonné à la truffe sur lit de caviar
+              </p>
+            </div>
+            <p class="menu__item-price">20€</p>
+          </div>
+        </section>
+      </div>
+
+      <!----------------------- menu plats -->
+      <div class="menu">
+        <section class="menu__category">
+          <h3 class="menu__category-title">PLATS</h3>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">Filet de bœuf aux herbes</p>
+              <p class="menu__item-content">
+                Accompagné de sa ribambelle de légumes
+              </p>
+            </div>
+            <p class="menu__item-price">40€</p>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">
+                Parmentier de queue de bœuf
+              </p>
+              <p class="menu__item-content">
+                À la truffe noire sur sa purée de panais
+              </p>
+            </div>
+            <p class="menu__item-price">35€</p>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">Filet de turbot</p>
+              <p class="menu__item-content">Aux agrumes</p>
+            </div>
+            <p class="menu__item-price">44€</p>
+          </div>
+        </section>
+      </div>
+
+      <!----------------------- menu desserts -->
+      <div class="menu">
+        <section class="menu__category">
+          <h3 class="menu__category-title">DESSERTS</h3>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">Paris-Brest</p>
+              <p class="menu__item-content">Revisité</p>
+            </div>
+            <p class="menu__item-price">18€</p>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">
+                Macaron au chocolat d'exception
+              </p>
+              <p class="menu__item-content">
+                Et glace à la vanille de Madagascar
+              </p>
+            </div>
+            <p class="menu__item-price">22€</p>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-description">
+              <p class="menu__item-subtitle text">Mousse au chocolat</p>
+              <p class="menu__item-content">
+                Au piment d'Espelette et à la truffe noire
+              </p>
+            </div>
+            <p class="menu__item-price">23€</p>
+          </div>
+        </section>
+      </div>
+
+      <button type="button" class="btn btn--validate">Commander</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer__container">
+      <a class="footer__logo" href="#"> ohmyfood </a>
+      <ul class="footer__list">
+        <li>
+          <a class="footer__link" href="#"
+            ><i class="footer__icon fas fa-utensils"></i>Proposer un
+            restaurant</a
+          >
+        </li>
+        <li>
+          <a class="footer__link" href="#"
+            ><i class="footer__icon fas fa-hands-helping"></i>Devenir
+            partenaire</a
+          >
+        </li>
+        <li><a class="footer__link" href="#">Mentions légales</a></li>
+        <li>
+          <a class="footer__link" href="mailto:contact@ohmyfood.com">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
