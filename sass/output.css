@@ -426,6 +426,11 @@ main {
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.title__restaurante .title {
+  font-family: "Shrikhand", cursive;
 }
 
 .menu {
@@ -450,6 +455,11 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   line-height: normal;
+}
+
+.menu__category-underline {
+  width: 40px;
+  border-top: solid 3px #99E2D0;
 }
 
 .menu__category-title {
