@@ -1,32 +1,28 @@
 @import "../utils/variables";
 
 /* Main */
-
 main {
   background-color: $color-gray;
-}
 
-h1, h2 {  
-  font-size: 24px;
-  font-weight: 700;
-  margin: 14px 0px;
+  h1, h2 {  
+    font-size: 24px;
+    font-weight: 700;
+    margin: 14px 0;
+  }
 }
 
 /* Components */
-
 .local {
   background-color: $very-light-gray;
   text-align: center;
   height: 50px;
-  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0px 3px 9px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.15);
 
   &__text, &__icon {
     color: $very-dark-gray;
-    text-align: center;
   }
 
   &__text {
@@ -37,14 +33,13 @@ h1, h2 {
 .hero {
   padding: 35px 0 55px;
   text-align: center;
-  gap: 25px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 25px;
 
   &__title {
-    padding: 0px 48px;
+    padding: 0 48px;
   }
 
   &__subtitle {
@@ -59,39 +54,43 @@ h1, h2 {
     font-weight: 500;
     border-radius: 50px;
     cursor: pointer;
-    background: $color-btn;
+    background-image: $color-btn;
     color: white;
     border: none;
     width: 60%;
-    height: 50px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    height: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    transition: all 1s;
+    margin-bottom: 30px;
 
     &:hover {
-      background: $color-btn-hover;
+      background-image: $color-btn-hover;
+
     }
   }
 }
 
 /* Middle Section */
-
 .functioning {
   background-color: $color-white;
   padding: 45px 15px;
+
+  &__steps {
+    text-align: center;
+  }
 
   &__step {
     background: $color-gray;
     border-radius: 20px;
     height: 65px;
     width: 75vw;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     margin: 0 auto 24px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: unset;
-    cursor: pointer;
-    position: relative;
     padding-left: 35px;
+    position: relative;
+    cursor: pointer;
 
     &:hover {
       background: $color-gray;
@@ -102,21 +101,16 @@ h1, h2 {
     }
   }
 
-  &__steps {
-    text-align: center;
+  &__icon {
+    color: $color-icon;
+    width: 20px;
   }
-}
-
-.functioning__icon {
-  color: $color-icon;
-  width: 20px;
 }
 
 span.number {
   background: $primary;
   padding: 5px 9px;
   border-radius: 15px;
-  right: 66px;
   color: $color-white;
   position: absolute;
   left: -12px;
@@ -130,85 +124,101 @@ p.text {
 }
 
 /* Bottom Section */
-
 section.restaurants {
   padding: 45px 15px;
+
+  .restaurant__card {
+    position: relative;
+    background: #FFFFFF;
+    width: 85vw;
+    height: 225px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card__badge {
+      position: absolute;
+      background: $tertiary;
+      color: $dark-cyan;
+      padding: 5px 10px;
+      border-radius: 2px;
+      top: 20px;
+      right: 15px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card__title {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .card__subtitle {
+      font-weight: 300;
+      font-size: 17px;
+    }
+
+    .card__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card__txt {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 12px;
+    }
+  }
+
+  .restaurants_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.restaurant__card {
-  position: relative;
-  background: #FFFFFF;
-  width: 85vw;
-  height: 225px;
-  margin: 10px 0;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
+/* Like */
 
-article.restaurants_cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-img.img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-span.card__badge {
-  position: absolute;
-  background: $tertiary;
-  color: $dark-cyan;
-  padding: 5px 10px;
-  border-radius: 2px;
-  top: 20px;
-  right: 15px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-h3.card__title {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-p.card__subtitle {
-  font-weight: 300;
-  font-size: 17px;
-}
-
-.card__content {
-  display: flex;
-  justify-content: space-between;
-}
-
-i.card__like.menu__like.menu__like--noBg.far.fa-heart.fa-2x {
-  color: $color-black;
+.card__like {
   position: absolute;
   bottom: 30px;
   right: 15px;
   font-size: 24px;
-  transition: color 1s ease-out;
+
+  &--noBg {
+    .far.fa-heart.fa-2x {
+      position: absolute;
+    }
   }
 
-  i.card__like.menu__like.menu__like--bg.fas.fa-heart.fa-2x {
+  &--bg {
+    opacity: 0;
     color: transparent;
-    position: absolute;
-    bottom: 30px;
-    right: 15px;
-    font-size: 24px;
-    transition: color 1s ease-out;
+    background-clip: text;
+    background-image: $color-btn;
+    transition: all 1s;
 
-  &.card__like.menu__like.menu__like--bg.fas.fa-heart.fa-2x:hover {
-    color: $secondary;
+    &.fas.fa-heart.fa-2x:hover {
+      opacity: 1;
+    }
   }
 }
 
-.card__txt {
+/* Menu Button */
+.menu__btn.card__btn {
   display: flex;
-  gap: 8px;
-  padding: 12px;
-  flex-direction: column;
+  height: 24px;
+}
+
+/* Relative Position */
+.relative {
+  position: relative;
 }

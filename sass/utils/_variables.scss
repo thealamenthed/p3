@@ -12,8 +12,9 @@ $color-gray: #F6F6F6;
 $color-gray-hover: #F5EDFF;
 $color-icon: rgb(144, 142, 142);
 $very-dark-gray: #353535;
-$color-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-$color-btn-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+$color-btn: linear-gradient(#9356DC, #FF79DA);
+$color-btn-hover: linear-gradient(to top, #9356DC, #FF79DA, #FFFFFF 175%);
+
 /* Fonts */
 $font-title: 'Shrikhand', cursive;
 $font-text: 'Roboto', sans-serif;
