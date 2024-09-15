@@ -48,9 +48,11 @@ produits de qualité.
 Polices
 Logo et titres : Shrikhand
 Texte : Roboto
+
 Couleurs
-Primaire Secondaire Tertiaire
-#9356DC #FF79DA #99E2D0
+Primaire : #9356DC
+Secondaire : #FF79DA
+Tertiaire : #99E2D0
 
 # Problématique
 
@@ -191,7 +193,7 @@ Cela crée un fichier output.css à partir de votre fichier Sass.
 Si vous souhaitez surveiller les changements et compiler automatiquement à chaque modification, utilisez la commande :
 
 ```
-sass --watch main.scss:output.css
+sass --watch sass/main.scss:sass/output.css
 ```
 
 Inclure le fichier CSS dans votre HTML :

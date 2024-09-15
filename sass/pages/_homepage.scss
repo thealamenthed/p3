@@ -1,0 +1,224 @@
+@import "../utils/variables";
+
+/* Main */
+main {
+  background-color: $color-gray;
+
+  h1, h2 {  
+    font-size: 24px;
+    font-weight: 700;
+    margin: 14px 0;
+  }
+}
+
+/* Components */
+.local {
+  background-color: $very-light-gray;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.15);
+
+  &__text, &__icon {
+    color: $very-dark-gray;
+  }
+
+  &__text {
+    margin-left: 10px;
+  }
+}
+
+.hero {
+  padding: 35px 0 55px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  &__title {
+    padding: 0 48px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: $very-dark-gray;
+    line-height: 21px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    background-image: $color-btn;
+    color: white;
+    border: none;
+    width: 60%;
+    height: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    transition: all 1s;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-image: $color-btn-hover;
+
+    }
+  }
+}
+
+/* Middle Section */
+.functioning {
+  background-color: $color-white;
+  padding: 45px 15px;
+
+  &__steps {
+    text-align: center;
+  }
+
+  &__step {
+    background: $color-gray;
+    border-radius: 20px;
+    height: 65px;
+    width: 75vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-gray;
+
+      .functioning__icon {
+        color: $primary;
+      }
+    }
+  }
+
+  &__icon {
+    color: $color-icon;
+    width: 20px;
+  }
+}
+
+span.number {
+  background: $primary;
+  padding: 5px 9px;
+  border-radius: 15px;
+  color: $color-white;
+  position: absolute;
+  left: -12px;
+  width: 8px;
+}
+
+p.text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* Bottom Section */
+section.restaurants {
+  padding: 45px 15px;
+
+  .restaurant__card {
+    position: relative;
+    background: #FFFFFF;
+    width: 85vw;
+    height: 225px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card__badge {
+      position: absolute;
+      background: $tertiary;
+      color: $dark-cyan;
+      padding: 5px 10px;
+      border-radius: 2px;
+      top: 20px;
+      right: 15px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card__title {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .card__subtitle {
+      font-weight: 300;
+      font-size: 17px;
+    }
+
+    .card__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card__txt {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 12px;
+    }
+  }
+
+  .restaurants_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Like */
+
+.card__like {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  font-size: 24px;
+
+  &--noBg {
+    .far.fa-heart.fa-2x {
+      position: absolute;
+    }
+  }
+
+  &--bg {
+    opacity: 0;
+    color: transparent;
+    background-clip: text;
+    background-image: $color-btn;
+    transition: all 1s;
+
+    &.fas.fa-heart.fa-2x:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/* Menu Button */
+.menu__btn.card__btn {
+  display: flex;
+  height: 24px;
+}
+
+/* Relative Position */
+.relative {
+  position: relative;
+}

@@ -1,0 +1,156 @@
+@import "../utils/variables";
+
+// Mixins pour les paddings
+@mixin padding($top, $right-left, $bottom) {
+  padding: $top $right-left $bottom;
+}
+
+main {
+  width: 100%;
+}
+
+.hero-section {
+  width: 100%;
+  height: 275px;
+  background-size: cover;
+}
+.img-menu1 {
+  background-image: url("/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.img-menu2 {
+  background-image: url("/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.img-menu3 {
+  background-image: url("/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.img-menu4 {
+  background-image: url("/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+
+.header {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 0 20px;
+}
+
+.header__back-icon {
+  font-size: 17px;
+}
+
+.background__menu {
+  display: block;
+  width: 100%;
+  background-color: $color-gray;
+  border-radius: 30px 30px 0 0;
+  margin-top: -55px;
+}
+
+.title__restaurante {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  @include padding(20px, 10px, 20px);
+  font-family: $font-text;
+
+  .title {
+    font-family: $font-title;
+  }
+}
+
+.menu {
+  @include padding(20px, 10px, 20px);
+}
+
+.menu__category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &-underline {
+    width: 40px;
+    border-top: solid 3px $tertiary;
+  }
+
+  &-title {
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+.menu__item {
+  background-color: white;
+  border-radius: 15px;
+  height: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  &:hover .menu__item-check {
+    width: 69px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+  }
+
+  .menu__item-description {
+    padding: 16px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .menu__item-check {
+    opacity: 0;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background: $tertiary;
+    align-items: center;
+    border-radius: 0 15px 15px 0;
+
+    i.fa-solid.fa-circle-check {
+      color: $color-white;
+    }
+  }
+
+  .menu__item-details {
+    display: flex;
+    padding-top: 5px;
+    margin-bottom: -3px;
+  }
+
+  .menu__item-subtitle {
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .menu__item-content {
+    font-weight: 300;
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .menu__item-price {
+    font-weight: 700;
+    font-size: 15px;
+    width: 10%;
+  }
+}
+
+#order-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
