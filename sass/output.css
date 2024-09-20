@@ -254,9 +254,14 @@ main h2 {
 .functioning {
   background-color: #FFFFFF;
   padding: 45px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .functioning__steps {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .functioning__step {
   background: #F6F6F6;
@@ -274,7 +279,7 @@ main h2 {
 .functioning__step:hover {
   background: #F6F6F6;
 }
-.functioning__step:hover .functioning__icon {
+.functioning__step:hover__icon {
   color: #9356DC;
 }
 .functioning__icon {
@@ -384,31 +389,26 @@ section.restaurants .restaurants_cards {
   position: relative;
 }
 
-/* Desktop */
+/* Styles Desktop */
 @media (min-width: 1024px) {
-  main h1 {
-    font-size: 40px;
-    margin: 0px 0;
-  }
-  .hero__btn {
-    margin-bottom: 0px;
-  }
-  section.functioning {
+  .functioning {
     display: flex;
-    flex-direction: column;
     gap: 20px;
+    align-items: baseline;
+  }
+  .functioning__container {
+    width: 100%;
+  }
+  .functioning__steps {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-between;
+  }
+  .functioning__step {
+    margin: 0;
   }
 }
-.functioning__step {
-  margin: 0 auto 0px;
-}
-
-.functioning__steps {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-}
-
 /* Colors */
 /* Fonts */
 main {
