@@ -1,10 +1,11 @@
-@import "../utils/variables";
+@import '../utils/variables';
 
 /* Main */
 main {
   background-color: $color-gray;
 
-  h1, h2 {  
+  h1,
+  h2 {
     font-size: 24px;
     font-weight: 700;
     margin: 14px 0;
@@ -21,7 +22,8 @@ main {
   justify-content: center;
   box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.15);
 
-  &__text, &__icon {
+  &__text,
+  &__icon {
     color: $very-dark-gray;
   }
 
@@ -57,7 +59,7 @@ main {
     background-image: $color-btn;
     color: white;
     border: none;
-    width: 60%;
+    width: 218px;
     height: 60px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
     transition: all 1s;
@@ -65,18 +67,24 @@ main {
 
     &:hover {
       background-image: $color-btn-hover;
-
     }
   }
 }
 
 /* Middle Section */
+
 .functioning {
-  background-color: $color-white;
+  background: $color-white;
   padding: 45px 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
 
   &__steps {
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   &__step {
@@ -95,7 +103,7 @@ main {
     &:hover {
       background: $color-gray;
 
-      .functioning__icon {
+      &__icon {
         color: $primary;
       }
     }
@@ -126,10 +134,12 @@ p.text {
 /* Bottom Section */
 section.restaurants {
   padding: 45px 15px;
+  display: flex;
+  justify-content: center;
 
   .restaurant__card {
     position: relative;
-    background: #FFFFFF;
+    background: #ffffff;
     width: 85vw;
     height: 225px;
     margin: 10px 0;
@@ -179,9 +189,11 @@ section.restaurants {
   }
 
   .restaurants_cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+
+    row-gap: 2rem;
   }
 }
 
@@ -221,4 +233,57 @@ section.restaurants {
 /* Relative Position */
 .relative {
   position: relative;
+}
+
+/* Responsive Desktop */
+@media (min-width: 1024px) {
+  h1 {
+    &.hero__title {
+      font-size: 40px;
+    }
+  }
+
+  .functioning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    &__container {
+      width: 100%;
+    }
+
+    &__steps {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      justify-content: space-between;
+    }
+
+    &__step {
+      margin: 0;
+    }
+  }
+
+  .content__list {
+    display: flex;
+    justify-content: center;
+    width: 56%;
+    flex-direction: column;
+  }
+
+  section.restaurants {
+    display: flex;
+    justify-content: center;
+
+    .restaurants_cards {
+      grid-template-columns: repeat(2, 1fr);
+      height: auto;
+      column-gap: 6rem;
+    }
+
+    .restaurant__card {
+      width: 25vw;
+    }
+  }
 }
