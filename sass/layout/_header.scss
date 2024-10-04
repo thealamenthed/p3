@@ -1,5 +1,4 @@
-@import "../utils/variables";
-
+@import '../utils/variables';
 
 a.logo {
   font-family: $font-title;
@@ -11,5 +10,8 @@ a.logo {
   text-align: center;
   // box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
 
+/* Responsive Desktop */
+@media (min-width: 1024px) {
 }
