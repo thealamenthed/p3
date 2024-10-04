@@ -15,19 +15,25 @@ main {
   background-size: cover;
 }
 .img-menu1 {
-  background-image: url('./assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+  background: url('/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg')
+    0 0 no-repeat;
+  background-size: cover;
 }
 .img-menu2 {
-  background: url(./assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) 0 -121px
+  background: url('/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg') 0 -121px
     no-repeat;
   background-size: cover;
 }
 .img-menu3 {
-  background-image: url('./assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+  background: url('/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg')
+    0 0 no-repeat;
+  background-size: cover;
 }
 
 .img-menu4 {
-  background-image: url('./assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+  background: url('/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg')
+    0 0 no-repeat;
+  background-size: cover;
 }
 
 .header {
@@ -149,9 +155,70 @@ main {
     width: 10%;
   }
 }
+.card__like.menu {
+  bottom: 16px;
+}
 
 #order-button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+
+/* Responsive Desktop */
+@media (min-width: 1024px) {
+  .hero-section {
+    height: 383px;
+  }
+  .img-menu1 {
+    background: url('/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg')
+      0 -507px no-repeat;
+    background-size: cover;
+  }
+  .img-menu2 {
+    background: url('/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg') 0 -1065px
+      no-repeat;
+    background-size: cover;
+  }
+  .img-menu3 {
+    background: url('/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg')
+      0 -496px no-repeat;
+    background-size: cover;
+  }
+
+  .img-menu4 {
+    background: url('/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg')
+      0 -581px no-repeat;
+    background-size: cover;
+  }
+
+  .contenair__menu {
+    display: flex;
+    justify-content: center;
+    background: $color-white;
+  }
+
+  .background__menu {
+    width: 60%;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .menu {
+    padding: 20px 115px 20px;
+  }
+
+  .title__restaurante {
+    justify-content: center;
+  }
+
+  .card__like.menu {
+    right: 24%;
+    font-size: 22px;
+    bottom: 16px;
+  }
+
+  .menu__item .menu__item-price {
+    width: 4%;
+  }
 }
