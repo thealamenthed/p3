@@ -512,15 +512,11 @@ main {
     font-size: 15px;
     width: 10%; }
 
-.card__like.menu {
-  bottom: 16px; }
-
 #order-button {
   display: flex;
   justify-content: center;
   margin-top: 20px; }
 
-/* Responsive Desktop */
 @media (min-width: 1024px) {
   .hero-section {
     height: 383px; }
