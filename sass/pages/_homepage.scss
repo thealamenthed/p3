@@ -1,5 +1,72 @@
 @import '../utils/variables';
 
+/* Loader */
+// .loader-container {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: white;
+//   opacity: 1;
+//   visibility: visible;
+//   z-index: 9999;
+//   transition:
+//     opacity 0.5s ease,
+//     visibility 0.5s ease;
+//   animation: hideLoader 3s forwards;
+// }
+
+// .loader {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 80px;
+// }
+
+// .loader div {
+//   width: 16px;
+//   height: 16px;
+//   background-color: $secondary;
+//   border-radius: 50%;
+//   animation: grow-shrink 1.5s infinite;
+// }
+
+// .loader div:nth-child(1) {
+//   animation-delay: 0s;
+// }
+
+// .loader div:nth-child(2) {
+//   animation-delay: 0.3s;
+// }
+
+// .loader div:nth-child(3) {
+//   animation-delay: 0.6s;
+// }
+
+// @keyframes grow-shrink {
+//   0%,
+//   100% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.5);
+//   }
+// }
+
+// @keyframes hideLoader {
+//   0% {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+//   100% {
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+// }
+
 /* Main */
 main {
   background-color: $color-gray;
@@ -55,18 +122,27 @@ main {
     font-size: 16px;
     font-weight: 500;
     border-radius: 50px;
+    margin-bottom: 30px;
     cursor: pointer;
-    background-image: $color-btn;
+    background: $color-btn;
     color: white;
     border: none;
     width: 218px;
     height: 60px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
-    transition: all 1s;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+    opacity: 0.7;
+    transition:
+      transform 450ms ease-in-out,
+      opacity 450ms ease-in-out; /* Ajout de l'opacity à la transition */
 
     &:hover {
-      background-image: $color-btn-hover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+      opacity: 1; /* Changement de l'opacité lors du survol */
+      transition:
+        transform 1000ms cubic-bezier(0.32, 0, 0.07, 1),
+        opacity 1000ms cubic-bezier(0.32, 0, 0.07, 1); /* Transition avec bézier */
     }
   }
 }
@@ -218,7 +294,7 @@ section.restaurants {
     background-image: $color-btn;
     transition: all 1s;
 
-    &.fas.fa-heart.fa-2x:hover {
+    &.fas.fa-heart.fa-2x:active {
       opacity: 1;
     }
   }

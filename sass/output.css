@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font Titre */
 /* font-family: 'Shrikhand', cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -159,17 +160,17 @@ a.footer__logo {
   display: block;
   margin: auto;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 15px 25px; }
 
 a.footer__link {
   padding: 15px 25px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer; }
 
 i.footer__icon {
-  color: #FFFFFF;
+  color: #ffffff;
   margin-right: 15px; }
 
 @media (min-width: 1024px) {
@@ -187,9 +188,10 @@ i.footer__icon {
     display: flex; } }
 /* Colors */
 /* Fonts */
+/* Loader */
 /* Main */
 main {
-  background-color: #F6F6F6; }
+  background-color: #f6f6f6; }
   main h1,
   main h2 {
     font-size: 24px;
@@ -198,7 +200,7 @@ main {
 
 /* Components */
 .local {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   text-align: center;
   height: 50px;
   display: flex;
@@ -228,21 +230,29 @@ main {
     font-size: 16px;
     font-weight: 500;
     border-radius: 50px;
+    margin-bottom: 30px;
     cursor: pointer;
-    background-image: linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient(#9356dc, #ff79da);
     color: white;
     border: none;
     width: 218px;
     height: 60px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
-    transition: all 1s;
-    margin-bottom: 30px; }
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+    opacity: 0.7;
+    transition: transform 450ms ease-in-out, opacity 450ms ease-in-out;
+    /* Ajout de l'opacity à la transition */ }
     .hero__btn:hover {
-      background-image: linear-gradient(to top, #9356DC, #FF79DA, #FFFFFF 175%); }
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+      opacity: 1;
+      /* Changement de l'opacité lors du survol */
+      transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), opacity 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+      /* Transition avec bézier */ }
 
 /* Middle Section */
 .functioning {
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 45px 15px;
   display: flex;
   flex-direction: column;
@@ -253,7 +263,7 @@ main {
     display: flex;
     flex-direction: column; }
   .functioning__step {
-    background: #F6F6F6;
+    background: #f6f6f6;
     border-radius: 20px;
     height: 65px;
     width: 75vw;
@@ -265,18 +275,18 @@ main {
     position: relative;
     cursor: pointer; }
     .functioning__step:hover {
-      background: #F6F6F6; }
+      background: #f6f6f6; }
       .functioning__step:hover__icon {
-        color: #9356DC; }
+        color: #9356dc; }
   .functioning__icon {
     color: #908e8e;
     width: 20px; }
 
 span.number {
-  background: #9356DC;
+  background: #9356dc;
   padding: 5px 9px;
   border-radius: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: absolute;
   left: -12px;
   width: 8px; }
@@ -306,7 +316,7 @@ section.restaurants {
       border-radius: 15px 15px 0 0; }
     section.restaurants .restaurant__card .card__badge {
       position: absolute;
-      background: #99E2D0;
+      background: #99e2d0;
       color: #008766;
       padding: 5px 10px;
       border-radius: 2px;
@@ -346,9 +356,9 @@ section.restaurants {
     opacity: 0;
     color: transparent;
     background-clip: text;
-    background-image: linear-gradient(#9356DC, #FF79DA);
+    background-image: linear-gradient(#9356dc, #ff79da);
     transition: all 1s; }
-    .card__like--bg.fas.fa-heart.fa-2x:hover {
+    .card__like--bg.fas.fa-heart.fa-2x:active {
       opacity: 1; }
 
 /* Menu Button */
@@ -406,19 +416,19 @@ main {
   background-size: cover; }
 
 .img-menu1 {
-  background: url("/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") 0 0 no-repeat;
+  background: url("../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") 0 0 no-repeat;
   background-size: cover; }
 
 .img-menu2 {
-  background: url("/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") 0 -121px no-repeat;
+  background: url("../assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") 0 -121px no-repeat;
   background-size: cover; }
 
 .img-menu3 {
-  background: url("/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 0 no-repeat;
+  background: url("../assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 0 no-repeat;
   background-size: cover; }
 
 .img-menu4 {
-  background: url("/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") 0 0 no-repeat;
+  background: url("../assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") 0 0 no-repeat;
   background-size: cover; }
 
 .header {
@@ -433,7 +443,7 @@ main {
 .background__menu {
   display: block;
   width: 100%;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
   margin-top: -55px; }
 
@@ -455,7 +465,7 @@ main {
   gap: 10px; }
   .menu__category-underline {
     width: 40px;
-    border-top: solid 3px #99E2D0; }
+    border-top: solid 3px #99e2d0; }
   .menu__category-title {
     font-weight: 300;
     font-size: 16px; }
@@ -483,11 +493,11 @@ main {
     display: flex;
     justify-content: center;
     height: 100%;
-    background: #99E2D0;
+    background: #99e2d0;
     align-items: center;
     border-radius: 0 15px 15px 0; }
     .menu__item .menu__item-check i.fa-solid.fa-circle-check {
-      color: #FFFFFF; }
+      color: #ffffff; }
   .menu__item .menu__item-details {
     display: flex;
     padding-top: 5px;
@@ -522,33 +532,30 @@ main {
     height: 383px; }
 
   .img-menu1 {
-    background: url("/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") 0 -507px no-repeat;
+    background: url("../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") 0 -507px no-repeat;
     background-size: cover; }
 
   .img-menu2 {
-    background: url("/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") 0 -1065px no-repeat;
+    background: url("../assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") 0 -1065px no-repeat;
     background-size: cover; }
 
   .img-menu3 {
-    background: url("/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 -496px no-repeat;
+    background: url("../assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 -496px no-repeat;
     background-size: cover; }
 
   .img-menu4 {
-    background: url("/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") 0 -581px no-repeat;
+    background: url("../assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") 0 -581px no-repeat;
     background-size: cover; }
 
   .contenair__menu {
     display: flex;
     justify-content: center;
-    background: #FFFFFF; }
+    background: #ffffff; }
 
   .background__menu {
     width: 60%;
     padding-left: 60px;
     padding-right: 60px; }
-
-  .menu {
-    padding: 20px 115px 20px; }
 
   .title__restaurante {
     justify-content: center; }
