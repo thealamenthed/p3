@@ -14,6 +14,9 @@
 // Mobile
 main {
   width: 100%;
+  &.menus {
+    background-color: $color-white;
+  }
 }
 
 .hero-section {
@@ -83,6 +86,34 @@ main {
 }
 
 // Menu
+section.menu {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+section.menu.entries {
+  animation-delay: 0.2s;
+}
+
+section.menu.plats {
+  animation-delay: 0.4s;
+}
+
+section.menu.desserts {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); // Commence plus bas
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); // Position normale
+  }
+}
 .menu {
   @include padding(20px, 10px, 20px);
 }
@@ -112,11 +143,10 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
   &:hover .menu__item-check {
     width: 69px;
     opacity: 1;
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .menu__item-description {
@@ -171,6 +201,10 @@ main {
     font-size: 15px;
     width: 10%;
   }
+}
+
+.card__like.menu {
+  bottom: 15px;
 }
 
 #order-button {
@@ -231,7 +265,7 @@ main {
   }
 
   .card__like.menu {
-    right: 24%;
+    right: 30%;
     font-size: 22px;
     bottom: 16px;
   }
