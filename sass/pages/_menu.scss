@@ -14,6 +14,9 @@
 // Mobile
 main {
   width: 100%;
+  &.menus {
+    background-color: $color-white;
+  }
 }
 
 .hero-section {
@@ -24,28 +27,28 @@ main {
 
 .img-menu1 {
   @include background-image(
-    '/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg',
+    '../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg',
     0,
     0
   );
 }
 .img-menu2 {
   @include background-image(
-    '/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg',
+    '../assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg',
     0,
     -121px
   );
 }
 .img-menu3 {
   @include background-image(
-    '/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg',
+    '../assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg',
     0,
     0
   );
 }
 .img-menu4 {
   @include background-image(
-    '/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg',
+    '../assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg',
     0,
     0
   );
@@ -82,7 +85,35 @@ main {
   }
 }
 
-// Menu général
+// Menu
+section.menu {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+section.menu.entries {
+  animation-delay: 0.2s;
+}
+
+section.menu.plats {
+  animation-delay: 0.4s;
+}
+
+section.menu.desserts {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); // Commence plus bas
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); // Position normale
+  }
+}
 .menu {
   @include padding(20px, 10px, 20px);
 }
@@ -112,11 +143,10 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
   &:hover .menu__item-check {
     width: 69px;
     opacity: 1;
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .menu__item-description {
@@ -173,6 +203,10 @@ main {
   }
 }
 
+.card__like.menu {
+  bottom: 15px;
+}
+
 #order-button {
   display: flex;
   justify-content: center;
@@ -187,28 +221,28 @@ main {
 
   .img-menu1 {
     @include background-image(
-      '/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg',
+      '../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg',
       0,
       -507px
     );
   }
   .img-menu2 {
     @include background-image(
-      '/assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg',
+      '../assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg',
       0,
       -1065px
     );
   }
   .img-menu3 {
     @include background-image(
-      '/assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg',
+      '../assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg',
       0,
       -496px
     );
   }
   .img-menu4 {
     @include background-image(
-      '/assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg',
+      '../assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg',
       0,
       -581px
     );
@@ -226,16 +260,12 @@ main {
     padding-right: 60px;
   }
 
-  .menu {
-    padding: 20px 115px 20px;
-  }
-
   .title__restaurante {
     justify-content: center;
   }
 
   .card__like.menu {
-    right: 24%;
+    right: 30%;
     font-size: 22px;
     bottom: 16px;
   }
