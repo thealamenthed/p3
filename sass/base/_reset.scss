@@ -1,96 +1,77 @@
-@import "_fonts.scss";
+@import '_fonts.scss';
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+$font-primary: 'Roboto', sans-serif;
+
+// Mixins
+@mixin reset-margins-paddings {
   margin: 0;
   padding: 0;
+}
+
+@mixin reset-list {
+  list-style: none;
+}
+
+@mixin reset-text {
+  text-decoration: none;
+}
+
+@mixin block-display {
+  display: block;
+}
+
+@mixin border-collapse {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@mixin vertical-align-baseline {
+  vertical-align: baseline;
+}
+
+// Reset global
+* {
+  @include reset-margins-paddings();
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-  color: initial; 
-
+  @include vertical-align-baseline();
+  box-sizing: border-box;
+  color: initial;
 }
-/* HTML5 display-role reset for older browsers */
+
+// Reset for specific elements
+html,
+body {
+  font-family: $font-primary;
+  scroll-behavior: smooth;
+  line-height: 1.05;
+}
+
+ol,
+ul {
+  @include reset-list();
+}
+
+a:link {
+  @include reset-text();
+}
+
+blockquote,
+q {
+  quotes: none;
+
+  &:before,
+  &:after {
+    content: '';
+  }
+}
+
+table {
+  @include border-collapse();
+}
+
+// HTML5 elements reset
 article,
 aside,
 details,
@@ -102,37 +83,5 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+  @include block-display();
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-a:link {
-  text-decoration: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body{
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
-}
-

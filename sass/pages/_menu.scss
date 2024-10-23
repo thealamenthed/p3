@@ -143,6 +143,7 @@ section.menu.desserts {
   justify-content: space-between;
   align-items: flex-end;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   &:hover .menu__item-check {
     width: 69px;
     opacity: 1;
