@@ -297,7 +297,8 @@ section.restaurants {
   position: absolute;
   bottom: 30px;
   right: 15px;
-  font-size: 24px; }
+  font-size: 24px;
+  cursor: pointer; }
   .card__like--noBg .far.fa-heart.fa-2x {
     position: absolute; }
   .card__like--bg {
