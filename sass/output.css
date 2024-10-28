@@ -119,7 +119,7 @@ i.footer__icon {
   visibility: visible;
   z-index: 9999;
   transition: opacity 0.5s ease, visibility 0.5s ease;
-  animation: hideLoader 1000ms forwards; }
+  animation: hideLoader 2s forwards; }
 
 .loader {
   display: flex;
@@ -131,7 +131,7 @@ i.footer__icon {
   height: 16px;
   background-color: #ff79da;
   border-radius: 50%;
-  animation: grow-shrink 1.5s infinite; }
+  animation: grow-shrink 2.5s infinite; }
 
 .loader div:nth-child(1) {
   animation-delay: 0s; }
